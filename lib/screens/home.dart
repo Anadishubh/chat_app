@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
@@ -10,6 +11,14 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return const Scaffold();
+    return Scaffold(
+      appBar: AppBar(
+        backgroundColor: const Color.fromARGB(255, 214, 238, 5),
+        title: const Text(
+          'WeChat',
+          style: TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+        ),
+      ),
+    );
   }
 }

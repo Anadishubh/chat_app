@@ -23,12 +23,31 @@ class _SplashScreenState extends State<SplashScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
       backgroundColor: const Color.fromARGB(255, 214, 238, 5),
-      body: Container(
-        decoration: const BoxDecoration(
-          image: DecorationImage(image: AssetImage('assets/images/chat.png'))
-        ),
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Center(
+            child: Container(
+              width: 200,
+              height: 200,
+              decoration: const BoxDecoration(
+                image: DecorationImage(
+                  image: AssetImage('assets/images/chat.png'),
+                  fit: BoxFit.contain,
+                ),
+              ),
+            ),
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          const Text(
+            'WeChat',
+            style:TextStyle(fontSize: 25, fontWeight: FontWeight.bold),
+          )
+        ],
       ),
     );
   }
